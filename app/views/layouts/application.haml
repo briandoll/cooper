@@ -4,31 +4,30 @@
     %title 
       TJ's Gym Food Cooperative
     = stylesheet_link_tag "application"
+    = javascript_include_tag :defaults
   %body
     %div#container
       %div#banner
         %img{:src=>"/images/tjs-gym-logo.jpg"}/        
-      %h1 Welcome to TJ's Gym Food Cooperative
+      %div#header
+        %h3 Welcome to TJ's Gym Food Cooperative
 
       %div#outer
         %div#inner
           %div#left
             %h2 Categories
-            %ul
-              %li Meat
-              %li Veggies
-              %li Non-perishables
+            = render :partial => "categories/category_list"
 
             %h2 My Account
             %ul
-              %li Brian Doll
-              %li Current Balance: $106.03
-              %li My Orders
-              %li Log Out
+              = render :partial => "users/user_bar"
 
             %h2 My Cart
 
           %div#content
+            %p/
+            - flash.each do |key, msg| 
+              = content_tag :div, msg, :class => ["flash_", key], :id => "notice_#{key}"
 
             = yield
 

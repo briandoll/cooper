@@ -10,16 +10,20 @@ a {
 	color: #3c4d6a;
 }
 
-h1 {
+h3 {
 	font-size: 11px;
+}
+
+#header {
 	text-transform: uppercase;
 	background-color: #626262;
 	color: #ffffff;
 	border-top: 1px solid #000000;
 	border-bottom: 1px solid #000000;
 	padding: 5px 15px;
-	margin: 0px
+	margin: 0px	
 }
+
 h2 {
 	font-size: 20px;
 	font-weight: normal;

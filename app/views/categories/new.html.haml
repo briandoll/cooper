@@ -1,0 +1,8 @@
+= error_messages_for :category
+%p
+  - form_for @category, :url => {:action => 'create'} do |form|
+    %fieldset
+      %legend Create Category
+      %label{:for => "category"} Name:
+      = form.text_field :name      
+      = submit_tag "Save"

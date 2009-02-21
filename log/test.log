@@ -1,0 +1,82 @@
+  [4;36;1mUser Load (1.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM "users" WHERE (login = 'quentin' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.8ms)[0m   [0mINSERT INTO "users" ("name", "salt", "updated_at", "activated_at", "crypted_password", "remember_token_expires_at", "activation_code", "remember_token", "login", "email", "created_at") VALUES('', '1740b6ce9cafb864511039c8bc84c870158c0268', '2009-02-21 21:53:37', NULL, '854990e59fb1fbc6a405d15eef35745df6e2e52e', NULL, 'b4477d8205df782ece16d424c7f53bbc88b55a71', NULL, 'quire', 'quire@example.com', '2009-02-21 21:53:37')[0m
+Sent mail to quire@example.com
+
+Date: Sat, 21 Feb 2009 13:53:37 -0800
+From: brian@emphaticsolutions.com
+To: quire@example.com
+Subject: [Cooper] Please activate your new account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Your account has been created.
+
+  Username: quire
+  Password: quire69
+
+Visit this url to activate your account:
+
+  http://localhost:3000/activate/b4477d8205df782ece16d424c7f53bbc88b55a71
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "salt", "updated_at", "activated_at", "crypted_password", "remember_token_expires_at", "activation_code", "remember_token", "login", "email", "created_at") VALUES('', '4cbdd40cc08e7a8632fcb06a4dbd32519405d01a', '2009-02-21 21:53:37', NULL, 'd67b2ff26828804c571847daa1bbe49f177b0c30', NULL, 'b470e91a33da5a6f31148bb765891f65377af188', NULL, 'quire', 'quire@example.com', '2009-02-21 21:53:37')[0m
+Sent mail to quire@example.com
+
+Date: Sat, 21 Feb 2009 13:53:37 -0800
+From: brian@emphaticsolutions.com
+To: quire@example.com
+Subject: [Cooper] Please activate your new account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Your account has been created.
+
+  Username: quire
+  Password: quire69
+
+Visit this url to activate your account:
+
+  http://localhost:3000/activate/b470e91a33da5a6f31148bb765891f65377af188
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mUser Load (2.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quentin2' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quentin@example.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (63.9ms)[0m   [0;1mUPDATE "users" SET "login" = 'quentin2', "updated_at" = '2009-02-21 21:53:37' WHERE "id" = 1[0m
+  [4;35;1mUser Load (1.6ms)[0m   [0mSELECT * FROM "users" WHERE (login = 'quentin2' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE "users" SET "remember_token" = '68fe82a0a53b77ef9f3a9a250b5e016f87857a9c', "remember_token_expires_at" = '2009-03-07 21:53:37', "updated_at" = '2009-02-21 21:53:37' WHERE "id" = 1[0m
+  [4;36;1mUser Load (1.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (357.1ms)[0m   [0mUPDATE "users" SET "remember_token" = '0e8cd09c26299a775ae6626a00cdf8c549dbf0e4', "remember_token_expires_at" = '2009-02-28 21:53:37', "updated_at" = '2009-02-21 21:53:37' WHERE "id" = 1[0m
+  [4;36;1mUser Load (1.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE "users" SET "remember_token" = '1528367682f7b7502e7a71311adfea30de347a42', "remember_token_expires_at" = '2009-02-28 21:53:38', "updated_at" = '2009-02-21 21:53:38' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.4ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.4ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quire') LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (1.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Exists (0.4ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'quentin' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.4ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'quentin@example.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "crypted_password" = '83c04fd4e982780af1aa9cb9bd15acee0ba8c678', "updated_at" = '2009-02-21 21:53:38' WHERE "id" = 1[0m
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" WHERE (login = 'quentin' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE "users" SET "remember_token" = '7a84dbf7f8a224ef76b0f48539a4937b6c3fb9ce', "remember_token_expires_at" = '2009-03-07 21:53:38', "updated_at" = '2009-02-21 21:53:38' WHERE "id" = 1[0m
+  [4;35;1mUser Load (1.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE "users" SET "remember_token" = 'd771d2cd1ab092db7940fe638f01d7c642e25c06', "remember_token_expires_at" = '2009-03-07 21:53:38', "updated_at" = '2009-02-21 21:53:38' WHERE "id" = 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "remember_token" = NULL, "remember_token_expires_at" = NULL, "updated_at" = '2009-02-21 21:53:38' WHERE "id" = 1[0m
