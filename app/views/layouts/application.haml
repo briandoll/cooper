@@ -1,0 +1,40 @@
+!!! Strict
+%html
+  %head
+    %title 
+      TJ's Gym Food Cooperative
+    = stylesheet_link_tag "application"
+  %body
+    %div#container
+      %div#banner
+        %img{:src=>"/images/tjs-gym-logo.jpg"}/        
+      %h1 Welcome to TJ's Gym Food Cooperative
+
+      %div#outer
+        %div#inner
+          %div#left
+            %h2 Categories
+            %ul
+              %li Meat
+              %li Veggies
+              %li Non-parishables
+
+            %h2 My Account
+            %ul
+              %li Brian Doll
+              %li Current Balance: $106.03
+              %li My Orders
+              %li Log Out
+
+            %h2 My Cart
+
+          %div#content
+
+            = yield
+
+      %div#footer
+        Powered by 
+        %a{:href=>"http://github.com/briandoll/cooper/tree/master"}cooper
+        an emphatic solution by
+        %a{:href=>"http://emphaticsolutions.com/"}
+          Brian Doll
