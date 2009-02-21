@@ -1,0 +1,5 @@
+.DS_Store
+log/**/*
+tmp/**/*
+db/schema.rb
+db/*.sqlite3
