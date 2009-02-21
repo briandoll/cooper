@@ -71,4 +71,4 @@ Orders
 * have a configurable fee (percentage or flat rate) built in
 
 Store managers / Admins
- - CRUD for products/vendors/deposits/announcements
+* CRUD for products/vendors/deposits/announcements
