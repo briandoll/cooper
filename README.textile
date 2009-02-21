@@ -1,0 +1,70 @@
+h1. Cooper
+Cooper aims to make consumers' cooperatives easy to manage.
+
+Cooper does:
+* Make it easy to allow co-op members to place orders for goods and services
+* Maintains member account balances, based on deposits and shipped orders
+* Provides basic functionality to manage the product catalog of goods and services offered
+
+Cooper does not:
+* Facilitate any financial transactions
+* Integrate with any financial or accounting systems
+
+h2. Suggested Use
+* Set up a PayPal (or similar) account for your cooperative
+* Determine minimum increments of member deposits, to make it easier to buy in bulk
+* Members make deposits to the coop account
+* Co-op managers record those deposits in cooper
+** (Developers, feel free to send me feature enhancements using the PayPal API, I have no desire to build that)
+* Members place orders for goods
+* Co-op managers purchase from vendors, sort orders, arrange for delivery or pickup
+* Co-op managers mark orders as complete at the appropriate time
+
+h2. Yes, this involves work
+Cooper helps to manage cooperatives.  Administering a cooperative does indeed take work.  If you want a solution to automate the aggregation of orders to vendors based on minimums, sort and package individual customer orders and manage delivery and billing, you probably want to run a business and are looking at the wrong solution.
+
+h2. Desired Features
+These are all pending, as this is just an idea at the moment.
+
+Products
+* are categorized
+* have a price
+* have a description
+* can be purchased
+* have a type (something we stock, or something we buy)
+* may relate to a vendor
+
+Vendors
+* have products
+* have an address
+* have a description
+* have a phone number
+
+Users
+* have roles (admin)
+* can browse products
+* can add items to an order
+* can remove items from an order
+* can change quantity of items in an order
+* have many orders
+* have many deposits
+* have account balances (total deposits - shipped orders)
+
+Deposits
+* belong to users
+* have values
+* have deposit dates
+
+Announcements
+* have a description
+* have a date
+
+Orders
+* have many items, which are products + quantity
+* have an order date
+* have a status (pending,placed,cancelled,complete)
+* belong to a user
+* have a configurable fee (percentage or flat rate) built in
+
+Store managers / Admins
+ - CRUD for products/vendors/deposits/announcements
