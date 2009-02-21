@@ -1,4 +1,5 @@
 h1. Cooper
+
 Cooper aims to make consumers' cooperatives easy to manage.
 
 Cooper does:
@@ -11,6 +12,7 @@ Cooper does not:
 * Integrate with any financial or accounting systems
 
 h2. Suggested Use
+
 * Set up a PayPal (or similar) account for your cooperative
 * Determine minimum increments of member deposits, to make it easier to buy in bulk
 * Members make deposits to the coop account
@@ -21,9 +23,11 @@ h2. Suggested Use
 * Co-op managers mark orders as complete at the appropriate time
 
 h2. Yes, this involves work
+
 Cooper helps to manage cooperatives.  Administering a cooperative does indeed take work.  If you want a solution to automate the aggregation of orders to vendors based on minimums, sort and package individual customer orders and manage delivery and billing, you probably want to run a business and are looking at the wrong solution.
 
 h2. Desired Features
+
 These are all pending, as this is just an idea at the moment.
 
 Products
