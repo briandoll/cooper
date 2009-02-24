@@ -1,1 +1,6 @@
 = "Category: #{@category.name}"
+%p
+  %ul
+    - @category.products.available.each do |p|    
+      %li
+        = p.name

@@ -1,6 +1,12 @@
 class Category < ActiveRecord::Base
-
+  has_many :products
+  
   def to_param
-    "#{id}-#{name}"
+    "#{id}-#{slug_name}"
   end
+  
+  def slug_name
+    name.downcase.gsub(/[^a-z0-9]+/,'-').gsub(/-+&$/, '').gsub(/^-+$/, '')
+  end
+    
 end

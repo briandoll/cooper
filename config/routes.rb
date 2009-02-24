@@ -7,6 +7,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resource :session
   map.resources :categories
+  
   map.root :controller => "home"
 
   map.connect ':controller/:action/:id'
