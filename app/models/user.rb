@@ -25,6 +25,7 @@ class User < ActiveRecord::Base
   # anything else you want your user to change should be added here.
   attr_accessible :login, :email, :name, :password, :password_confirmation
 
+  named_scope :pending_activation, :conditions => ["activated_at IS NULL"]
 
   # Activates the user in the database.
   def activate!
@@ -62,6 +63,14 @@ class User < ActiveRecord::Base
 
   def email=(value)
     write_attribute :email, (value ? value.downcase : nil)
+  end
+
+  def to_param
+    "#{id}-#{slug_name}"
+  end
+  
+  def slug_name
+    login.downcase.gsub(/[^a-z0-9]+/,'-').gsub(/-+&$/, '').gsub(/^-+$/, '')
   end
 
   protected

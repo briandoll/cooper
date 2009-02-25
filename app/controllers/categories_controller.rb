@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_filter :ensure_logged_in
   
   def index
     @categories = Category.all

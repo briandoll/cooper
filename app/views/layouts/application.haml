@@ -24,6 +24,9 @@
 
             %h2 My Cart
 
+            - if current_user_is_admin?
+              = render :partial => "admin/admin_menu"
+
           %div#content
             %p/
             - flash.each do |key, msg| 

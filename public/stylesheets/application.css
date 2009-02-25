@@ -8,12 +8,21 @@ body {
 }
 a {
 	color: #3c4d6a;
+	font-weight: bold;
+	text-decoration: none;
 }
 
 h3 {
 	font-size: 11px;
 }
 
+li {
+	list-style: none;
+}
+
+li:before {
+	content: "\0020 \0020 \0020 \00BB \0020";
+}
 #header {
 	text-transform: uppercase;
 	background-color: #626262;

@@ -11,10 +11,12 @@ class ProductTest < ActiveSupport::TestCase
       @product = Factory(:product)      
     end
     
-    should "appear in the available scope" do
-      
-      assert (Product.available.include? @product)
+    should "appear in the available scope" do      
+      assert(Product.available.include? @product)
     end
     
+    should  "be available" do
+      assert(@product.available?)
+    end
   end
 end

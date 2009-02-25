@@ -1,8 +1,13 @@
 class UsersController < ApplicationController
+  before_filter :ensure_current_user_is_admin, :only => [:pending, :activate]
 
   # render new.rhtml
   def new
     @user = User.new
+  end
+ 
+  def show
+    @user = User.find(params[:id])
   end
  
   def create
@@ -18,6 +23,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def pending
+    @users = User.pending_activation
+  end
+  
   def activate
     logout_keeping_session!
     user = User.find_by_activation_code(params[:activation_code]) unless params[:activation_code].blank?

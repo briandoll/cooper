@@ -1,0 +1,7 @@
+%h2
+  = "Users Pending Activation:"
+%p
+  %ul
+    - @users.each do |u|
+      %li
+        = u.login
