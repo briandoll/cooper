@@ -1,7 +1,6 @@
 %h2
   = "Category: #{@category.name}"
-%p
-  %ul
-    - @category.available_products.each do |p|    
-      %li
-        = p.name
+- @category.available_products.each do |p|    
+  %strong
+    = p.name
+  %br/

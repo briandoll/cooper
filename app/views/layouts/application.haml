@@ -2,41 +2,29 @@
 %html
   %head
     %title 
-      TJ's Gym Food Cooperative
+      = SITE_TITLE
     = stylesheet_link_tag "application"
     = javascript_include_tag :defaults
   %body
-    %div#container
-      %div#banner
-        %img{:src=>"/images/tjs-gym-logo.jpg"}/        
+    %div#wrapper
       %div#header
-        %h3 Welcome to TJ's Gym Food Cooperative
-
-      %div#outer
-        %div#inner
-          %div#left
-            %h2 Categories
-            = render :partial => "categories/category_list"
-
-            %h2 My Account
-            %ul
-              = render :partial => "users/user_bar"
-
-            %h2 My Cart
-
-            - if current_user_is_admin?
-              = render :partial => "admin/admin_menu"
-
-          %div#content
-            %p/
-            - flash.each do |key, msg| 
-              = content_tag :div, msg, :class => ["flash_", key], :id => "notice_#{key}"
-
-            = yield
-
+        %h1
+          = SITE_TITLE
+        %h2
+          = SITE_SUBTITLE
+    %div#content
+      %div#colOne
+        - flash.each do |key, msg| 
+          = content_tag :div, msg, :class => ["flash_", key], :id => "notice_#{key}"
+        = yield
+      %div#colTwo
+        = render :partial => "categories/category_list"
+        = render :partial => "users/user_menu"
+        = render :partial => "admin/admin_menu"
       %div#footer
-        Powered by 
-        %a{:href=>"http://github.com/briandoll/cooper/tree/master"}cooper,
-        an emphatic solution by
-        %a{:href=>"http://emphaticsolutions.com/"}
-          Brian Doll
+        %p
+          Powered by 
+          %a{:href=>"http://github.com/briandoll/cooper/tree/master"}cooper,
+          an emphatic solution by
+          %a{:href=>"http://emphaticsolutions.com/"}
+            Brian Doll

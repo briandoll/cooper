@@ -1,4 +1,4 @@
-%h2 Administration
-%ul
-  %li
-    = link_to "Authorize Users", :controller => :users, :action => :pending
+- if current_user_is_admin?
+  %h3 Administration
+  = link_to "Authorize Users", :controller => :users, :action => :pending
+  %br/

@@ -1,107 +1,175 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
 body {
-	background-color: #a09e9f;
-	font-size: 11px;
-	font-family: Verdana, Arial, Sans-Serif;
-	color: #404040;
-	padding: 0px;
-	margin: 0px;
-}
-a {
-	color: #3c4d6a;
-	font-weight: bold;
-	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	background: #311C00 url(/images/img1.jpg);
+	text-align: justify;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #9B8767;
 }
 
-h3 {
-	font-size: 11px;
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #E8D6B4;
 }
 
-li {
-	list-style: none;
-}
-
-li:before {
-	content: "\0020 \0020 \0020 \00BB \0020";
-}
-#header {
-	text-transform: uppercase;
-	background-color: #626262;
-	color: #ffffff;
-	border-top: 1px solid #000000;
-	border-bottom: 1px solid #000000;
-	padding: 5px 15px;
-	margin: 0px	
+h2, h3 {
+	margin: 0 0 20px 0;
+	padding: 0 0 10px 0;
+	background: url(/images/img3.gif) repeat-x left bottom;
+	text-transform: lowercase;
+	letter-spacing: -1px;
 }
 
 h2 {
-	font-size: 20px;
-	font-weight: normal;
-	padding: 5px 10px;
-	margin: 0px;
+	font-size: 25px;
 }
 
-img.download {
-	vertical-align: middle;
+h3 {
+	font-size: 17px;
 }
 
-#container {
-	width: 800px;
-	padding: 0px;
-	margin: 0px;
-	margin-left: auto;
-	margin-right: auto;
+p, ol, ul {
+	line-height: 160%;
 }
 
-#banner {
-	text-align: right;
-	background-color: #a09e9f;
-	padding: 0px;
-	margin: 0px;
+ul {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
 }
 
-#banner img {
-	padding: 10px 0px;
+ul li {
+	padding: 2px 0 5px 0;
+	background: url(/images/img4.gif) repeat-x;
 }
 
-
-#outer {
-	border-left: solid 200px #7d98c7; /* color of the left column */
-	background-color: #bababa; /* color of the content column */;
+ul li.first {
+	background: none;
 }
 
-#inner {
-	margin: 0px;
-	width: 100%;
+a {
+	color: #D9C09A;
 }
 
-/* The ie/pc pecularity */
-#left {
-	width: 200px;
+a:hover {
+	text-decoration: none;
+}
+
+strong {
+	color: #D9C09A;
+}
+
+.indent {
+	margin-top: 0;
+	margin-left: 130px;
+}
+
+.image {
 	float: left;
-	position: relative;
-	margin-left: -200px;
-	margin-right: 1px;
+	margin: 0;
 }
+
+#wrapper {
+	background: url(/images/img2.jpg) repeat-x;
+}
+
+/* Header */
+
+#header {
+	width: 730px;
+	height: 250px;
+	margin: 0 auto;
+}
+
+#header * {
+	text-transform: lowercase;
+	color: #FFFFFF;
+}
+
+#header h1 {
+	float: left;
+	padding: 90px 0 0 0;
+	letter-spacing: -2px;
+	font-size: 36px;
+}
+
+#header h2 {
+	float: left;
+	padding: 110px 0 0 6px;
+	background: none;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+#header h2 a {
+	text-decoration: none;
+}
+
+#header ul {
+	float: right;
+	margin: 0;
+	padding: 110px 0 0 0;
+	list-style: none;
+}
+
+#header li {
+	display: inline;
+}
+
+#header li a {
+	display: block;
+	float: left;
+	padding: 0 15px;
+	border-left: 1px solid #7DD2FA;
+}
+
+#header li.first a {
+	border: none;
+}
+
+/* Content */
 
 #content {
-	position: relative;
-	margin: 0px;
+	width: 730px;
+	margin: 0 auto;
 }
 
-p {
-	padding: 5px 10px;
-	margin: 0px;
+#colOne {
+	float: left;
+	width: 500px;
 }
 
-pre {
-	font-size: 12px;
-	padding: 5px 10px;
-	margin: 0px;
+#colTwo {
+	float: right;
+	width: 184px;
 }
+
+#colTwo h3 {
+	margin-top: 10px;
+}
+
+/* Footer */
 
 #footer {
-	clear: left;
-	padding: 0px;
-	margin: 0px;
-	text-align: right;
+	clear: both;
+	width: 730px;
+	margin: 20px auto;
+	padding: 20px 0;
+	background: url(/images/img4.gif) repeat-x;
+}
+
+#footer p {
+	margin: 0;
+	padding: 0;
+	text-transform: lowercase;
+	text-align: center;
 }
