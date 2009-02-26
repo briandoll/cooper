@@ -1,0 +1,6 @@
+Pre-release:
+* UI template
+* Basic browsing of products and categories
+* User authentication
+* Admin user authorization
+* Membership approval

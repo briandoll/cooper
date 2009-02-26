@@ -1,32 +1,9 @@
 h1. Cooper
 
-Cooper aims to make consumers' cooperatives easy to manage.
+h2. Who/What/When/Where/Why?
+See the "wiki on github":http://wiki.github.com/briandoll/cooper to learn more.
 
-Cooper does:
-* Make it easy to allow co-op members to place orders for goods and services
-* Maintains member account balances, based on deposits and shipped orders
-* Provides basic functionality to manage the product catalog of goods and services offered
-
-Cooper does not:
-* Facilitate any financial transactions
-* Integrate with any financial or accounting systems
-
-h2. Suggested Use
-
-* Set up a PayPal (or similar) account for your cooperative
-* Determine minimum increments of member deposits, to make it easier to buy in bulk
-* Members make deposits to the coop account
-* Co-op managers record those deposits in cooper
-** (Developers, feel free to send me feature enhancements using the PayPal API, I have no desire to build that)
-* Members place orders for goods
-* Co-op managers purchase from vendors, sort orders, arrange for delivery or pickup
-* Co-op managers mark orders as complete at the appropriate time
-
-h2. Yes, this involves work
-
-Cooper helps to manage cooperatives.  Administering a cooperative does indeed take work.  If you want a solution to automate the aggregation of orders to vendors based on minimums, sort and package individual customer orders and manage delivery and billing, you probably want to run a business and are looking at the wrong solution.
-
-h2. Desired Features
+h2. Initial Features
 
 These are all pending, as this is just an idea at the moment.
 
