@@ -1,7 +1,7 @@
 %h3 My Account
 - if logged_in?
   %div
-    = "Logged in as #{link_to_current_user :content_method => :login}"
+    = "Welcome back, #{current_user.login}!"
   %div
     = "(#{link_to "Log out", logout_path, { :title => "Log out" }})"
   %div
@@ -9,8 +9,6 @@
   %div
     My Orders
 - else
-  %div
-    = link_to_login_with_IP 'Not logged in', :style => 'border: none;'
   %div
     = link_to "Log in",  login_path,  { :title => "Log in" }
     = "/"
