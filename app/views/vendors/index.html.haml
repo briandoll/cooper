@@ -1,0 +1,12 @@
+%h2 Vendors:
+= link_to "Create a new vendor", new_vendor_path
+%p
+  %table{:border => 0, :width => "33%"}
+    - Vendor.all.each do |v| 
+      %tr
+        %td
+          %strong   
+            = link_to v.name, vendor_path(v)
+        %td
+          = link_to "Edit", edit_vendor_path(v)
+          

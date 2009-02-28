@@ -1,6 +1,7 @@
 class Product < ActiveRecord::Base
   belongs_to :category
-
+  belongs_to :vendor
+  
   STATUS_AVAILABLE      = 0
   STATUS_UNAVAILABLE    = 1
   

@@ -1,0 +1,23 @@
+= error_messages_for :vendor
+
+%h2 Create Vendor
+%p
+  - form_for @vendor do |form|
+    %div
+      %label{:for => "name"} Name:
+      = form.text_field :name
+    %div
+      %label{:for => "description"} Description:
+      = form.text_area :description
+    %div
+      %label{:for => "description"} Contact info:
+      = form.text_area :contact_info
+    %div
+      %label{:form => ''}
+      = submit_tag "Save"
+
+- if !@vendor.new_record?
+  %p
+  - form_for @vendor, :html => {:method => :delete}  do |form|
+    %label{:form => ''}
+    = submit_tag "Delete this vendor", :confirm => "Are you sure you wish to delete this vendor?"

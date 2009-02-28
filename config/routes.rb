@@ -6,9 +6,9 @@ ActionController::Routing::Routes.draw do |map|
   map.pending '/users/pending', :controller => 'users', :action => 'pending'
   
   map.resources :users
-
   map.resource :session
   map.resources :categories
+  map.resources :vendors
   
   map.root :controller => "home"
 

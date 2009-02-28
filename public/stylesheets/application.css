@@ -22,11 +22,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2, h3 {
-	margin: 0 0 20px 0;
+	margin: 0 0 10px 0;
 	padding: 0 0 10px 0;
 	background: url(/images/img3.gif) repeat-x left bottom;
 	text-transform: lowercase;
 	letter-spacing: -1px;
+}
+
+.errorExplanation h2 {	
+	margin: 0;
+	padding: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #E8D6B4;	
+	font-size: 17px;
+	background: none;
 }
 
 h2 {
@@ -37,23 +46,8 @@ h3 {
 	font-size: 17px;
 }
 
-p, ol, ul {
+p, ol {
 	line-height: 160%;
-}
-
-ul {
-	margin-left: 0;
-	padding-left: 0;
-	list-style: none;
-}
-
-ul li {
-	padding: 2px 0 5px 0;
-	background: url(/images/img4.gif) repeat-x;
-}
-
-ul li.first {
-	background: none;
 }
 
 a {
@@ -66,6 +60,40 @@ a:hover {
 
 strong {
 	color: #D9C09A;
+}
+
+form label { 
+	display: block;  /* block float the labels to left column, set a width */
+	float: left; 
+	width: 100px; 
+	padding: 0; 
+	margin: 5px 0 0; /* set top margin same as form input - textarea etc. elements */
+	text-align: right; 
+}
+
+form input {
+	/* display: inline; inline display must not be set or will hide submit buttons in IE 5x mac */
+	width:auto;      /* set width of form elements to auto-size, otherwise watch for wrap on resize */
+	margin:5px 0 0 10px; /* set margin on left of form elements rather than right of
+                              label aligns textarea better in IE */
+}
+
+form select {
+	margin: 5px 0 0 10px;
+}
+
+form textarea {
+	width: 250px;
+	margin:5px 0 0 10px;
+	height: 100px;
+}
+
+form input#reset {
+	margin-left:0px; /* set margin-left back to zero on reset button (set above) */
+}
+
+textarea { 
+	overflow: auto; 
 }
 
 .indent {
