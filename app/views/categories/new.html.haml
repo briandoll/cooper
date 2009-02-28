@@ -1,8 +1,13 @@
 = error_messages_for :category
+
+%h2 Create Category
 %p
-  - form_for @category, :url => {:action => 'create'} do |form|
-    %fieldset
-      %legend Create Category
-      %label{:for => "category"} Name:
-      = form.text_field :name      
-      = submit_tag "Save"
+  - form_for @category do |form|
+    %label{:for => "category"} Name:
+    = form.text_field :name
+    = submit_tag "Save"
+
+- if !@category.new_record?
+  %p
+  - form_for @category, :html => {:method => :delete}  do |form|
+    = submit_tag "Delete this category", :confirm => "Are you sure you wish to delete this category?"    

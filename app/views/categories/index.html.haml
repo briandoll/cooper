@@ -1,2 +1,11 @@
-%h1 Categories:
-= render :partial => "categories/category_list"
+%h2 Categories:
+= link_to "Create a new category", new_category_path
+%p
+  %table{:border => 0, :width => "33%"}
+    - all_categories.each do |cat| 
+      %tr
+        %td
+          %strong   
+            = link_to cat.name, category_path(cat)
+        %td
+          = link_to "Edit", edit_category_path(cat)

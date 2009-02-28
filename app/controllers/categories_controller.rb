@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   before_filter :ensure_logged_in
+  before_filter :ensure_current_user_is_admin, :only => [:index, :new, :create, :edit, :update, :destroy]
   
   def index
     @categories = Category.all
@@ -28,6 +29,7 @@ class CategoriesController < ApplicationController
 
   def edit
     @category = Category.find(params[:id])
+    render :action => 'new'
   end
 
   def update
