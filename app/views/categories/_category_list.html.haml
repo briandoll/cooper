@@ -1,5 +1,5 @@
 %h3 Browse by category
-- all_categories.each do |cat|    
+- Category.all.each do |cat|    
   = link_to cat.name, category_path(cat)
   %br/
 %p/
