@@ -2,7 +2,7 @@
 = link_to "Create a new category", new_category_path
 %p
   %table{:border => 0, :width => "33%"}
-    - all_categories.each do |cat| 
+    - Category.all.each do |cat| 
       %tr
         %td
           %strong   
