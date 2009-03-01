@@ -214,9 +214,9 @@ textarea {
 
 /* The wider this li is, the fewer columns there will be */
 #products_wrapper ul.multiple_columns li{
-        text-align: left;
-        float: left;
-        list-style: none;
-        height: 50px;
-        width: 200px;
-    }
+	text-align: left;
+	float: left;
+	list-style: none;
+	height: 50px;
+	width: 200px;
+}
