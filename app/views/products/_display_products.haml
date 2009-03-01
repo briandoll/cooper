@@ -1,4 +1,8 @@
-- products.each do |p|    
-  %h4
-    = link_to p.name, product_path(p)
-  %br/
+%div#products_wrapper
+  %ul{:class => "multiple_columns"}
+    - products.each do |p|    
+      %li
+        %div
+          = link_to p.name, product_path(p)
+          %br/
+          = number_to_currency(p.unit_price)

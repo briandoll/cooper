@@ -7,7 +7,7 @@ Released for free under a Creative Commons Attribution 2.5 License
 body {
 	margin: 0;
 	padding: 0;
-	background: #311C00 url(/images/img1.jpg);
+	background: #311C00 url("/images/img1.jpg");
 	text-align: justify;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -201,3 +201,22 @@ textarea {
 	text-transform: lowercase;
 	text-align: center;
 }
+
+
+#products_wrapper ul {
+    margin: 0 auto;
+}
+
+/* The wider the #list_wrapper is, the more columns will fit in it */
+#products_wrapper {
+    width: 500px;
+}
+
+/* The wider this li is, the fewer columns there will be */
+#products_wrapper ul.multiple_columns li{
+        text-align: left;
+        float: left;
+        list-style: none;
+        height: 50px;
+        width: 200px;
+    }

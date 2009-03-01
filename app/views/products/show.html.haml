@@ -4,7 +4,7 @@
 %p
   = @product.description
 %p
-  = @product.unit_price
+  = number_to_currency(@product.unit_price)
 %p
   = @product.product_type
 %p
