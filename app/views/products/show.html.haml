@@ -1,0 +1,11 @@
+%h2
+  = link_to "#{@product.category.name}", category_path(@product.category)
+  = " :: #{@product.name}"
+%p
+  = @product.description
+%p
+  = @product.unit_price
+%p
+  = @product.product_type
+%p
+  = @product.vendor.description_html

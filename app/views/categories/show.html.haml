@@ -1,6 +1,3 @@
 %h2
   = "Category: #{@category.name}"
-- @category.available_products.each do |p|    
-  %strong
-    = p.name
-  %br/
+= render :partial => "products/display_products", :locals => {:products => @category.available_products}

@@ -1,0 +1,11 @@
+%h2 Products:
+= link_to "Create a new product", new_product_path
+%p
+  %table{:border => 0, :width => "33%"}
+    - Product.all.each do |p| 
+      %tr
+        %td
+          %strong   
+            = link_to p.name, product_path(p)
+        %td
+          = link_to "Edit", edit_product_path(p)

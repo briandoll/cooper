@@ -5,3 +5,7 @@
   = @vendor.description_html
 %p
   = @vendor.contact_info_html
+%p 
+  - if !@vendor.available_products.empty?
+    %h4 Our Products:  
+    = render :partial => "products/display_products", :locals => {:products => @vendor.available_products}  

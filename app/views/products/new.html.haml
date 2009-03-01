@@ -1,0 +1,35 @@
+= error_messages_for :product
+
+%h2 Create Product
+%p
+  - form_for @product do |form|
+    %div
+      %label{:for => "name"} Name:
+      = form.text_field :name
+    %div
+      %label{:for => "price"} Unit price:
+      = form.text_field :unit_price      
+    %div
+      %label{:for => "description"} Description:
+      = form.text_area :description
+    %div
+      %label{:for => "category"} Category:
+      = form.collection_select(:category_id, Category.all, :id, :name, {:include_blank => true})
+    %div
+      %label{:for => "category"} Vendor:
+      = form.collection_select(:vendor_id, Vendor.all, :id, :name, {:include_blank => true})
+    %div
+      %label{:for => "status"} Product status:
+      = select_tag 'product[status]', options_for_select(Product::STATUS, @product.status)
+    %div
+      %label{:for => "type"} Product type:
+      = select_tag 'product[product_type]', options_for_select(Product::TYPES, @product.product_type)
+    %div
+      %label{:form => ''}
+      = submit_tag "Save"
+
+- if !@product.new_record?
+  %p
+  - form_for @product, :html => {:method => :delete}  do |form|
+    %label{:form => ''}
+    = submit_tag "Delete this product", :confirm => "Are you sure you wish to delete this product?"
