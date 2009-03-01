@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   include Authentication::ByPassword
   include Authentication::ByCookieToken
 
+  has_many :orders
+
   validates_presence_of     :login
   validates_length_of       :login,    :within => 3..40
   validates_uniqueness_of   :login
@@ -65,6 +67,19 @@ class User < ActiveRecord::Base
     write_attribute :email, (value ? value.downcase : nil)
   end
 
+  def submitted_orders
+    Order.find_all_by_user_id_and_status(id, Order::STATUS_SUBMITTED)
+  end
+
+  def completed_orders
+    Order.find_all_by_user_id_and_status(id, Order::STATUS_COMPLETE)    
+  end
+  
+  def open_order
+    @open_order = Order.find_by_user_id_and_status(id, Order::STATUS_OPEN)
+    @open_order ||= Order.create(self)
+  end
+  
   def to_param
     "#{id}-#{slug_name}"
   end

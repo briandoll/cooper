@@ -6,8 +6,8 @@ class CategoryTest < ActiveSupport::TestCase
   should_have_many :products
   
   context "a category with one product" do 
-    setup do 
-      @category = Factory(:category)      
+    setup do
+      @category = Factory(:product).category      
     end
     
     should "return the available products" do
