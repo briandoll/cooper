@@ -1,4 +1,5 @@
 class VendorsController < ApplicationController
+  before_filter :ensure_logged_in
   before_filter :ensure_current_user_is_admin, :except => [:show]
 
   def index
