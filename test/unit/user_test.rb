@@ -101,7 +101,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   def test_default_users_should_not_be_admins
-    assert(!users(:quentin).admin?)    
+    assert(!users(:aaron).admin?)    
   end
 
 protected
