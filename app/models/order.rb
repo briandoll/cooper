@@ -20,6 +20,18 @@ class Order < ActiveRecord::Base
     STATUS[super]
   end
   
+  def open?
+    STATUS[STATUS_OPEN].eql? status
+  end
+
+  def submitted?
+    STATUS[STATUS_SUBMITTED].eql? status
+  end
+
+  def complete?
+    STATUS[STATUS_COMPLETE].eql? status
+  end
+  
   def items
     order_items
   end

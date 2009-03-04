@@ -104,6 +104,39 @@ class UserTest < ActiveSupport::TestCase
     assert(!users(:aaron).admin?)    
   end
 
+  context "a user with one submitted order" do
+    setup do
+      @user = Factory(:user)
+      @order = @user.open_order
+      @order.status = Order::STATUS_SUBMITTED
+      @order.save
+    end
+    
+    should "return one submitted order from submitted_orders" do
+      assert_contains(@user.submitted_orders, @order)
+    end
+    
+    context "with an open order" do
+      setup { @open_order = @user.open_order }
+
+      should "be valid" do
+        assert_valid(@open_order)
+      end
+
+      should "have a status of Open" do        
+        assert(@open_order.status == Order::STATUS[Order::STATUS_OPEN])
+      end
+      
+      should "have have no items" do
+        assert(@open_order.items.size == 0)
+      end
+      
+    end
+  end
+
+
+
+
 protected
   def create_user(options = {})
     record = User.new({ :login => 'quire', :email => 'quire@example.com', :password => 'quire69', :password_confirmation => 'quire69' }.merge(options))

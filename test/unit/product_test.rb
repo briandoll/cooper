@@ -12,7 +12,7 @@ class ProductTest < ActiveSupport::TestCase
     end
     
     should "appear in the available scope" do      
-      assert(Product.available.include? @product)
+      assert_contains(Product.available, @product)
     end
     
     should  "be available" do

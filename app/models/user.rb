@@ -76,10 +76,14 @@ class User < ActiveRecord::Base
   end
   
   def open_order
-    @open_order = Order.find_by_user_id_and_status(id, Order::STATUS_OPEN)
-    @open_order ||= Order.create(self)
+    if @open_order && @open_order.open?
+      @open_order
+    else
+      @open_order = find_or_create_open_order
+    end    
+    @open_order
   end
-  
+
   def to_param
     "#{id}-#{slug_name}"
   end
@@ -94,5 +98,10 @@ class User < ActiveRecord::Base
         self.activation_code = self.class.make_token
     end
 
+  private
+    
+    def find_or_create_open_order
+      Order.find_by_user_id_and_status(id, Order::STATUS_OPEN) || Order.create(self)
+    end
 
 end

@@ -2,7 +2,6 @@ require 'test_helper'
 
 class ProductsControllerTest < ActionController::TestCase
 
-
   context "logged in as an admin" do
     setup { login_as :quentin }
 

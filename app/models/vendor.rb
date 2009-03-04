@@ -6,7 +6,7 @@ class Vendor < ActiveRecord::Base
   before_save :textilize
   
   def available_products
-    products.select{|p| p.available?}
+    products.available
   end
   
   def textilize
