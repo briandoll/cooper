@@ -1,3 +1,7 @@
+
+h1. Update
+I was building Cooper for a food cooperative that was just starting out.  The food coop could not gather the human power to continue, so the app is being shelved.  
+
 h1. Cooper
 
 h2. Who/What/When/Where/Why?
